@@ -5,6 +5,7 @@ import { ExternalLink, Clock, CheckCircle2, Archive, ChevronLeft, ChevronRight, 
 import { Github } from "@/components/icons/SocialIcons";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/basePath";
 import type { Project, ProjectCategory } from "@/types";
 
 interface ProjectCardProps {
@@ -146,7 +147,7 @@ function GalleryModal({
               className="absolute inset-0"
             >
               <Image
-                src={images[current]}
+                src={getAssetPath(images[current])}
                 alt={`${title} - imagen ${current + 1}`}
                 fill
                 className="object-contain"
@@ -186,7 +187,7 @@ function GalleryModal({
                 }`}
               >
                 <Image
-                  src={img}
+                  src={getAssetPath(img)}
                   alt={`thumb ${i + 1}`}
                   fill
                   className="object-cover"
@@ -230,7 +231,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             title={hasImages ? `Ver galería (${project.images!.length} imágenes)` : ""}
           >
             <Image
-              src={project.image}
+              src={getAssetPath(project.image)}
               alt={project.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"

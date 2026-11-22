@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/basePath";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import {
   Play,
@@ -251,7 +252,7 @@ export default function VideosSection() {
                   className="relative aspect-video w-full overflow-hidden bg-slate-950 cursor-pointer select-none"
                 >
                   <Image
-                    src={video.thumbnail}
+                    src={getAssetPath(video.thumbnail)}
                     alt={video.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

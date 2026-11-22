@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
 
+const basePath = "/portafoliov1";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/portafoliov1",
+  basePath,
+  assetPrefix: basePath,
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -19,6 +22,9 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 
