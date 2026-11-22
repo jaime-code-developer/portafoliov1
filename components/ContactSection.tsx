@@ -203,7 +203,7 @@ export default function ContactSection() {
                 </a>
                 <a
                   id="contact-linkedin-cta"
-                  href="https://linkedin.com/in/jaime-mamani"
+                  href="https://linkedin.com/in/jaimemamanimendizabal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 py-3.5 bg-slate-800/60 border border-slate-700 text-slate-300 font-medium rounded-xl hover:bg-slate-800 hover:border-slate-600 hover:text-slate-100 transition-all duration-200"
